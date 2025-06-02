@@ -5,6 +5,7 @@ import { Box, styled } from "@mui/material";
 import SideBar from "./sidebar/sidebar";
 import { InitialSection } from "../sections/initial-section";
 import { AnimatePresence } from "framer-motion";
+import Footer from "./footer/footer";
 
 const MainWrapper = styled(Box)(() => ({
   display: "flex",
@@ -84,6 +85,7 @@ export default function MainLayout({ children }) {
             >
               {children}
             </Box>
+            <Footer />
           </PageWrapper>
         </>
       )}

@@ -8,7 +8,7 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#D90416", // Main red color
+      main: "#8a2be2", // Main red color
       dark: "#A60303", // Darker red for hover
       light: "#F20505", // Lighter variant
     },

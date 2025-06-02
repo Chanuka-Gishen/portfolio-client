@@ -9,6 +9,8 @@ import {
   IconButton,
 } from "@mui/material";
 
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -76,38 +78,6 @@ export default function IntroductionSection() {
         justifyContent: "center",
       }}
     >
-      {/* <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          overflow: "hidden",
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: "-50%",
-            left: "-50%",
-            width: "200%",
-            height: "200%",
-            background: `
-            radial-gradient(
-              circle at center,
-              rgba(90, 20, 150, 0.4) 0%,
-              transparent 70%
-            )
-          `,
-            animation: "rotate 20s linear infinite",
-            "@keyframes rotate": {
-              "0%": { transform: "rotate(0deg)" },
-              "100%": { transform: "rotate(360deg)" },
-            },
-          },
-        }}
-      /> */}
-
-      {/* Content Grid */}
       <Grid size={12}>
         <Container>
           <Grid
@@ -183,6 +153,29 @@ export default function IntroductionSection() {
                   technologies across the entire stack from intuitive front-end
                   interfaces to robust back-end systems.
                 </Typography>
+                <Box
+                  display="flex"
+                  flexDirection="row"
+                  gap={2}
+                  alignItems="center"
+                >
+                  <AlternateEmailIcon
+                    fontSize="large"
+                    sx={{ color: "white" }}
+                  />
+                  <Typography color="white">
+                    chanukagishen@hotmail.com
+                  </Typography>
+                </Box>
+                <Box
+                  display="flex"
+                  flexDirection="row"
+                  gap={2}
+                  alignItems="center"
+                >
+                  <ContactPhoneIcon fontSize="large" sx={{ color: "white" }} />
+                  <Typography color="white">+94 76 075 6482</Typography>
+                </Box>
                 <Typography color="white">More about me</Typography>
                 <Stack
                   direction="row"
