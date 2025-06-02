@@ -7,6 +7,7 @@ import {
   IconButton,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
@@ -46,94 +47,98 @@ const frameworks = [
   { name: "GitHub", icon: "/images/techicons/github.svg" },
 ];
 
-const Carousel = ({ items, doubledItems, width, carouselRef }) => (
-  <Box sx={{ mb: 6 }}>
-    <Box
-      ref={carouselRef}
-      sx={{
-        position: "relative",
-        width: "100%",
-        overflow: "hidden",
-        py: 2,
-      }}
-    >
-      <motion.div
-        animate={{
-          x: [0, -width],
-          transition: {
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: items.length * 2, // Speed based on item count
-              ease: "linear",
-            },
-          },
-        }}
-        style={{
-          display: "flex",
-          width: "max-content",
+const Carousel = ({ items, doubledItems, width, carouselRef }) => {
+  const matchDownSM = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const matchDownMD = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  return (
+    <Box sx={{ width: matchDownSM ? "400px" : matchDownMD ? "750px" : "100%" }}>
+      <Box
+        ref={carouselRef}
+        sx={{
+          position: "relative",
+          width: "100%",
+          overflow: "hidden",
+          py: 2,
         }}
       >
-        {doubledItems.map((tech, index) => (
-          <motion.div
-            key={`${tech.name}-${index}`}
-            whileHover={{ scale: 1.1 }}
-            style={{
-              width: "150px",
-              height: "150px",
-              margin: "0 20px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Box
-              component="img"
-              src={tech.icon}
-              //src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg"
-              alt={tech.name}
-              sx={{
-                width: "80px",
-                height: "80px",
-                objectFit: "contain",
-                transition: "all 0.3s",
-                "&:hover": {
-                  transform: "scale(1.1)",
-                  filter: "drop-shadow(0 0 8px rgba(138, 43, 226, 0.5))",
-                },
-              }}
-            />
-            <Typography
-              variant="body1"
-              sx={{
-                mt: 2,
-                color: "white",
-                fontWeight: 500,
+        <motion.div
+          animate={{
+            x: [0, -width],
+            transition: {
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: items.length * 2, // Speed based on item count
+                ease: "linear",
+              },
+            },
+          }}
+          style={{
+            display: "flex",
+            width: "max-content",
+          }}
+        >
+          {doubledItems.map((tech, index) => (
+            <motion.div
+              key={`${tech.name}-${index}`}
+              whileHover={{ scale: 1.1 }}
+              style={{
+                width: "150px",
+                height: "150px",
+                margin: "0 20px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              {tech.name}
-            </Typography>
-          </motion.div>
-        ))}
-      </motion.div>
+              <Box
+                component="img"
+                src={tech.icon}
+                //src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg"
+                alt={tech.name}
+                sx={{
+                  width: "80px",
+                  height: "80px",
+                  objectFit: "contain",
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                    filter: "drop-shadow(0 0 8px rgba(138, 43, 226, 0.5))",
+                  },
+                }}
+              />
+              <Typography
+                variant="body1"
+                sx={{
+                  mt: 2,
+                  color: "white",
+                  fontWeight: 500,
+                }}
+              >
+                {tech.name}
+              </Typography>
+            </motion.div>
+          ))}
+        </motion.div>
 
-      {/* Gradient overlay */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background:
-            "linear-gradient(90deg, rgba(10,10,42,1) 0%, rgba(10,10,42,0) 10%, rgba(10,10,42,0) 90%, rgba(10,10,42,1) 100%)",
-          pointerEvents: "none",
-        }}
-      />
+        {/* Gradient overlay */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background:
+              "linear-gradient(90deg, rgba(10,10,42,1) 0%, rgba(10,10,42,0) 10%, rgba(10,10,42,0) 90%, rgba(10,10,42,1) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+      </Box>
     </Box>
-  </Box>
-);
+  );
+};
 
 export default function AboutSection() {
   const doubledLanguages = [...languages, ...languages];

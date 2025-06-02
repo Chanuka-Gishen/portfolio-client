@@ -51,6 +51,13 @@ function overridesLight(theme) {
         },
       },
     },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          border: "none",
+        },
+      },
+    },
   };
 }
 

@@ -8,6 +8,7 @@ import ServicesSection from "./sections/services-section";
 import ExperianceSection from "./sections/experiance-section";
 import AboutSection from "./sections/about-section";
 import ProjectSection from "./sections/projects-section";
+import ContactSection from "./sections/contact-section";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <AboutSection />
         <ExperianceSection />
         <ProjectSection />
+        <ContactSection />
       </MainLayout>
     </ThemeProvider>
   );

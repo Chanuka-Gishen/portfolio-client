@@ -180,7 +180,7 @@ export default function ExperianceSection() {
                     <SchoolIcon fontSize="large" />
                   </IconButton>
                   <Typography variant="h3" gutterBottom>
-                    Education Qualifications
+                    Educational Qualifications
                   </Typography>
                 </Stack>
                 {educationalExperiance.map((exp, index) => (
