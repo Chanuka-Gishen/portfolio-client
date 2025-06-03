@@ -47,9 +47,18 @@ const frameworks = [
   { name: "GitHub", icon: "/images/techicons/github.svg" },
 ];
 
-const Carousel = ({ items, doubledItems, width, carouselRef }) => {
+const Carousel = ({
+  items,
+  doubledItems,
+  width,
+  carouselRef,
+  direction = "left",
+}) => {
   const matchDownSM = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const matchDownMD = useMediaQuery((theme) => theme.breakpoints.down("md"));
+
+  const animationX = direction === "left" ? [0, -width] : [-width, 0];
+
   return (
     <Box sx={{ width: matchDownSM ? "400px" : matchDownMD ? "750px" : "100%" }}>
       <Box
@@ -63,7 +72,7 @@ const Carousel = ({ items, doubledItems, width, carouselRef }) => {
       >
         <motion.div
           animate={{
-            x: [0, -width],
+            x: animationX,
             transition: {
               x: {
                 repeat: Infinity,
@@ -567,6 +576,7 @@ export default function AboutSection() {
               doubledItems={doubledFrameworks}
               width={frameworkWidth}
               carouselRef={frameworkRef}
+              direction="right"
             />
           </Grid>
         </Grid>
