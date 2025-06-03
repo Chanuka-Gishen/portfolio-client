@@ -76,6 +76,7 @@ export default function IntroductionSection() {
         overflow: "hidden",
         alignItems: "center",
         justifyContent: "center",
+        pt: '20px'
       }}
     >
       <Grid size={12}>
@@ -284,7 +285,7 @@ export default function IntroductionSection() {
               >
                 <Box
                   component="img"
-                  src="/images/background/cover-img.png"
+                  src="/images/background/profile-2.png"
                   alt="Chanuka Gishen"
                   sx={{
                     width: "100%",
