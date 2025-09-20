@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import {
   AppBar,
   Toolbar,
@@ -17,6 +16,7 @@ const Header = ({ toggleMobileSidebar, isScrolled }) => {
 
   const handleNavigate = (path) => {
     const element = document.getElementById(path);
+
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
@@ -27,26 +27,34 @@ const Header = ({ toggleMobileSidebar, isScrolled }) => {
 
   return (
     <AppBar
-      position="static"
+      position='static'
       elevation={isScrolled ? 0 : 0}
       sx={{
-        backgroundColor: "transparent",
+        backgroundColor: isScrolled ? "white" : "transparent",
         transition: "all 0.3s ease-in-out",
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: "bold",
-              color: isScrolled ? "black" : "white",
-              transition: "color 0.3s ease-in-out",
-              letterSpacing: 5,
-            }}
-          >
-            CHANUKA GISHEN
-          </Typography>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: matchDownSM ? "flex-end" : "space-between",
+            alignItems: "center",
+          }}
+        >
+          {!matchDownSM && (
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: "bold",
+                color: isScrolled ? "black" : "white",
+                transition: "color 0.3s ease-in-out",
+                letterSpacing: 5,
+              }}
+            >
+              CHANUKA GISHEN
+            </Typography>
+          )}
 
           <IconButton
             edge="end"
@@ -88,10 +96,6 @@ const Header = ({ toggleMobileSidebar, isScrolled }) => {
       </Container>
     </AppBar>
   );
-};
-
-Header.propTypes = {
-  sx: PropTypes.object,
 };
 
 export default Header;

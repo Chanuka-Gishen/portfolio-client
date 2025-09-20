@@ -1,11 +1,13 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 import Header from "./header/header";
 import { Box, styled } from "@mui/material";
 import SideBar from "./sidebar/sidebar";
-import { InitialSection } from "../sections/initial-section";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./footer/footer";
+import { InitialSection } from "@/app/home/initial-section";
 
 const MainWrapper = styled(Box)(() => ({
   display: "flex",
@@ -68,7 +70,6 @@ export default function MainLayout({ children }) {
                 zIndex: 1100,
                 transition: "all 0.3s ease-in-out",
                 backgroundColor: isScrolled ? "white" : "transparent",
-                boxShadow: isScrolled ? 1 : 0,
               }}
             >
               <Header

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import {
   Box,
@@ -43,8 +45,13 @@ const educationalExperiance = [
 
 const workExperiance = [
   {
+    year: "2025 Jan - Present",
+    title: "Fullstack Software Engineer (Freelance)",
+    from: "ZenXbyte, Panadura",
+  },
+  {
     year: "2023 Nov - Present",
-    title: "Fullstack Software Engineer",
+    title: "Fullstack Software Engineer (Freelance)",
     from: "360Tech, Bandaragama",
   },
   {
@@ -154,10 +161,10 @@ export default function ExperianceSection() {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
-      sx={{ width: "100%", py: 8 }}
+      sx={{ width: "100%" }}
     >
       <Container sx={{ px: { xs: 2, md: 6 } }}>
-        <Grid container spacing={{ xs: 2, md: 4 }}>
+        <Grid container rowSpacing={4} columnSpacing={2}>
           <Grid size={{ xs: 12, md: 6 }}>
             <motion.div variants={itemVariants}>
               <Stack spacing={4}>

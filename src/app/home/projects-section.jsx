@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -241,8 +243,7 @@ export default function ProjectSection() {
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
       sx={{
-        py: 8,
-        px: { xs: 2, md: 6 },
+        py: 4,
         width: "100%",
         background: `
           linear-gradient(
@@ -255,7 +256,7 @@ export default function ProjectSection() {
         `,
       }}
     >
-      <Container>
+      <Container sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
         <Typography
           variant="h3"
           component={motion.div}
@@ -263,15 +264,29 @@ export default function ProjectSection() {
           sx={{
             color: "white",
             textAlign: "center",
-            mb: 6,
           }}
         >
           My Projects
         </Typography>
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid size={{ xs: 12, md: 6 }} key={index}>
-              <motion.div variants={cardVariants} custom={index}>
+            <Grid
+              size={{ xs: 12, md: 6 }}
+              key={index}
+              sx={{
+                alignItems: "stretch",
+                display: "flex",
+              }}
+            >
+              <motion.div
+                variants={cardVariants}
+                custom={index}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                }}
+              >
                 <Card
                   component={motion.div}
                   whileHover={{
@@ -280,6 +295,7 @@ export default function ProjectSection() {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
+                    flexGrow: 1,
                     transition: "box-shadow 0.3s",
                     "&:hover": {
                       boxShadow: 6,

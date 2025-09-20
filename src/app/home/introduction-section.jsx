@@ -1,4 +1,5 @@
-import { useState } from "react";
+'use client'
+
 import { motion } from "framer-motion";
 import {
   Typography,
