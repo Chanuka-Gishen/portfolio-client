@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from "framer-motion";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
@@ -69,18 +71,12 @@ export default function ServicesSection() {
       sx={{
         minHeight: { xs: "auto", md: "100vh" },
         width: "100%",
-        py: 8,
-        px: { xs: 2, md: 6 },
       }}
     >
       <Container>
-        <Grid container spacing={2}>
+        <Grid container rowSpacing={4} columnSpacing={2}>
           <Grid size={12}>
-            <Typography
-              variant="h2"
-              align="center"
-              gutterBottom
-            >
+            <Typography variant="h2" align="center" gutterBottom>
               Services I Offer
             </Typography>
           </Grid>

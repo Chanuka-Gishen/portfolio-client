@@ -14,6 +14,8 @@ const SideBar = ({ isOpen, toggleDrawer }) => {
         behavior: "smooth",
         block: "start",
       });
+
+      toggleDrawer();
     }
   };
 

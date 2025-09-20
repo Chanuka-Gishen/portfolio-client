@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Box,
@@ -13,7 +16,7 @@ import {
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import BusinessIcon from "@mui/icons-material/Business";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import { useEffect, useRef, useState } from "react";
+
 
 const languages = [
   { name: "JavaScript", icon: "/images/techicons/javascript.svg" },
@@ -372,6 +375,8 @@ export default function AboutSection() {
               >
                 <Typography
                   variant="overline"
+                  textAlign={{ xs: "center", md: "left" }}
+                  fontWeight="bold"
                   sx={{
                     color: "rgba(138, 43, 226, 0.8)",
                     letterSpacing: 2,
@@ -395,6 +400,7 @@ export default function AboutSection() {
                 >
                   <Typography
                     variant="h1"
+                    textAlign={{ xs: "center", md: "left" }}
                     sx={{
                       color: "white",
                       fontWeight: 700,
@@ -428,11 +434,10 @@ export default function AboutSection() {
                   <Typography
                     variant="body1"
                     fontStyle="italic"
-                    textAlign="justify"
+                    textAlign={{ xs: "center", md: "justify" }}
                     sx={{
                       color: "rgba(255,255,255,0.8)",
                       mb: 4,
-                      maxWidth: "80%",
                     }}
                   >
                     "From initial concept to final deployment, I handle every
