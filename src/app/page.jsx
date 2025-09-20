@@ -46,9 +46,9 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.chanukagishen.com/images/background/profile-2.png",
+        url: "https://www.chanukagishen.com/images/background/profile-og.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Chanuka Gishen Portfolio Preview",
       },
     ],
