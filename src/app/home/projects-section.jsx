@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -13,6 +13,8 @@ import {
   Button,
   Collapse,
   IconButton,
+  Stack,
+  Link,
 } from "@mui/material";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -24,6 +26,7 @@ const projects = [
   {
     id: 1,
     title: "E-Commerce Platform - Vitalian Fashion",
+    url: null,
     shortDesc:
       "Developed a full-featured e-commerce platform comprising both a public-facing storefront and a dedicated admin dashboard.",
     fullDesc:
@@ -45,6 +48,7 @@ const projects = [
   {
     id: 2,
     title: "Vehicle Service Center Management System",
+    url: null,
     shortDesc:
       "A complete management system designed for vehicle service centers",
     fullDesc:
@@ -63,7 +67,29 @@ const projects = [
   },
   {
     id: 3,
+    title: "Company Portfolio - Wijaya Auto",
+    url: "https://wijaya-auto.netlify.app/",
+    shortDesc:
+      "Company portfolio website for Wijaya auto electricals to showcase their company profile and online booking system.",
+    fullDesc:
+      "I developed a company portfolio website for Wijaya auto electricals to showcase their company profile and online booking system.",
+    technologies: ["NextJs", "NodeJs", "ExpressJs", "MongoDb", "MUI"],
+    images: [
+      "images/projects/wp-1.png",
+      "images/projects/wp-2.png",
+      "images/projects/wp-3.png",
+      "images/projects/wp-4.png",
+      "images/projects/wp-5.png",
+      "images/projects/wp-6.png",
+      "images/projects/wp-7.png",
+      "images/projects/wp-8.png",
+      "images/projects/wp-9.png",
+    ],
+  },
+  {
+    id: 4,
     title: "Dilco Plantation Portfolio",
+    url: "https://dilco-plantation.netlify.app",
     shortDesc: "A portfolio website for dilco plantations.",
     fullDesc:
       "I developed a custom portfolio with beatifull animations for a plantation company. With responsive design user experiance is guranteed.",
@@ -75,11 +101,14 @@ const projects = [
       "images/projects/dilco-4.png",
       "images/projects/dilco-5.png",
       "images/projects/dilco-6.png",
+      "images/projects/dilco-7.png",
+      "images/projects/dilco-8.png",
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Delivery Driver Mobile App",
+    url: null,
     shortDesc:
       "A mobile application developed for a delivery company to help drivers.",
     fullDesc:
@@ -97,8 +126,9 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Air Conditioning Service Management System - EREngineers",
+    url: null,
     shortDesc:
       "A complete digital solution for an air conditioning service company, enabling staff to manage work orders, invoices, customer information, technician points, and unit service history, with image upload capabilities.",
     fullDesc:
@@ -124,8 +154,9 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Visa Appointment Bot",
+    url: null,
     shortDesc:
       "An automation tool built for a visa consultancy company in Dubai to detect and book available visa interview slots in real-time.",
     fullDesc:
@@ -141,8 +172,9 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Bookkeeping Management System",
+    url: null,
     shortDesc:
       "A tailored invoicing and bookkeeping system designed for a hardware store to manage sales, expenses, payments, and financial records efficiently.",
     fullDesc:
@@ -160,8 +192,9 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Emotic - Final Year Project",
+    url: null,
     shortDesc:
       "A mobile music streaming app that uses a hybrid recommendation system to suggest songs based on the user’s current mood valence score.",
     fullDesc:
@@ -428,16 +461,34 @@ export default function ProjectSection() {
                   </Box>
 
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography
-                      variant="h5"
-                      component={motion.div}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.2 }}
-                      sx={{ mb: 1, fontWeight: 600 }}
+                    <Stack
+                      direction={{ sx: "column", md: "row" }}
+                      spacing={2}
+                      alignItems="center"
+                      sx={{ mb: 1 }}
                     >
-                      {project.title}
-                    </Typography>
+                      <Typography
+                        variant="h5"
+                        component={motion.div}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        sx={{ fontWeight: 600 }}
+                      >
+                        {project.title}
+                      </Typography>
+                      {project.url && (
+                        <Link
+                          href={project.url}
+                          underline="none"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          Live Preview
+                        </Link>
+                      )}
+                    </Stack>
+
                     <Typography
                       variant="body1"
                       component={motion.div}

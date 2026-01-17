@@ -50,14 +50,9 @@ const workExperiance = [
     from: "ZenXbyte, Panadura",
   },
   {
-    year: "2023 Nov - Present",
-    title: "Fullstack Software Engineer (Freelance)",
+    year: "2024 Jan - 2025 Dec",
+    title: "Fullstack Software Engineer (Contract Basis)",
     from: "360Tech, Bandaragama",
-  },
-  {
-    year: "2022 - Present",
-    title: "Fullstack Web Developer",
-    from: "Freelancing",
   },
   {
     year: "2021 - 2022",
