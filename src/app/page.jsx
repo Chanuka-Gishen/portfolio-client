@@ -1,20 +1,5 @@
 import HomeView from "./home/home-view";
 
-// export const metadata = {
-//   title: "Portfolio | Chanuka Gishen",
-//   description:
-//     "Experienced full-stack software engineer passionate about building scalable, user-centric applications with modern technologies across the entire stack from intuitive front-end interfaces to robust back-end systems.",
-//   keywords: [
-//     "Chanuka Mendis",
-//     "Chanuka",
-//     "Chanuka Gishen",
-//     "Gishen",
-//     "Gishen Mendis",
-//     "Full-stack developer",
-//     "Software Engineer",
-//   ],
-// };
-
 export const metadata = {
   title: "Portfolio | Chanuka Gishen",
   description:

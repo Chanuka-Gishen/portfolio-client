@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -16,7 +16,6 @@ import {
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import BusinessIcon from "@mui/icons-material/Business";
 import CampaignIcon from "@mui/icons-material/Campaign";
-
 
 const languages = [
   { name: "JavaScript", icon: "/images/techicons/javascript.svg" },
@@ -234,127 +233,126 @@ export default function AboutSection() {
         sx={{
           height: "100%",
           py: 8,
-          px: { xs: 2, md: 6 },
         }}
       >
-        <Grid
-          container
-          spacing={4}
-          sx={{ height: "100%", alignItems: "center" }}
-        >
+        <Grid container spacing={4} alignItems={"center"}>
           <Grid size={{ xs: 12, md: 4 }}>
-            <Stack spacing={3} sx={{ height: "100%" }}>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={leftCardVariants}
-              >
-                <Card
-                  sx={{
-                    p: 4,
-                    background: "rgba(10, 10, 42, 0.6)",
-                    backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(138, 43, 226, 0.3)",
-                    boxShadow: "0 8px 32px rgba(138, 43, 226, 0.2)",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
+            <Grid container spacing={2}>
+              <Grid size={{ xs: 12, sm: 6 }}>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={leftCardVariants}
                 >
-                  <Stack spacing={1} alignItems="center">
-                    <Typography
-                      variant="h1"
-                      sx={{
-                        color: "white",
-                        fontWeight: 700,
-                        background: "linear-gradient(90deg, #8a2be2, #4b0082)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
-                    >
-                      2+
-                    </Typography>
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        color: "rgba(255,255,255,0.9)",
-                        fontWeight: 500,
-                        textAlign: "center",
-                      }}
-                    >
-                      Years Of
-                    </Typography>
-                    <Typography
-                      variant="h4"
-                      sx={{
-                        color: "white",
-                        fontWeight: 600,
-                        textAlign: "center",
-                      }}
-                    >
-                      Experience
-                    </Typography>
-                  </Stack>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={leftCardVariants}
-                transition={{ delay: 0.2 }}
-              >
-                <Card
-                  sx={{
-                    p: 3,
-                    background: "rgba(10, 10, 42, 0.6)",
-                    backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(138, 43, 226, 0.3)",
-                    boxShadow: "0 8px 32px rgba(138, 43, 226, 0.2)",
-                  }}
-                >
-                  <Stack
-                    direction="row"
-                    spacing={2}
-                    alignItems="center"
-                    justifyContent="space-evenly"
+                  <Card
+                    sx={{
+                      p: 4,
+                      background: "rgba(10, 10, 42, 0.6)",
+                      backdropFilter: "blur(10px)",
+                      border: "1px solid rgba(138, 43, 226, 0.3)",
+                      boxShadow: "0 8px 32px rgba(138, 43, 226, 0.2)",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
                   >
-                    <IconButton
-                      sx={{
-                        backgroundColor: "rgba(138, 43, 226, 0.2)",
-                        color: "rgba(138, 43, 226, 0.8)",
-                        "&:hover": {
-                          backgroundColor: "rgba(138, 43, 226, 0.3)",
-                        },
-                      }}
-                    >
-                      <WorkOutlineIcon fontSize="large" />
-                    </IconButton>
-                    <Stack spacing={1}>
+                    <Stack spacing={1} alignItems="center">
                       <Typography
-                        variant="h6"
+                        variant="h1"
+                        sx={{
+                          color: "white",
+                          fontWeight: 700,
+                          background:
+                            "linear-gradient(90deg, #8a2be2, #4b0082)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        2+
+                      </Typography>
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          color: "rgba(255,255,255,0.9)",
+                          fontWeight: 500,
+                          textAlign: "center",
+                        }}
+                      >
+                        Years Of
+                      </Typography>
+                      <Typography
+                        variant="h4"
                         sx={{
                           color: "white",
                           fontWeight: 600,
+                          textAlign: "center",
                         }}
                       >
-                        Fullstack Developer
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "rgba(255,255,255,0.7)",
-                        }}
-                      >
-                        10+ Projects Completed
+                        Experience
                       </Typography>
                     </Stack>
-                  </Stack>
-                </Card>
-              </motion.div>
-            </Stack>
+                  </Card>
+                </motion.div>
+              </Grid>
+              <Grid size={{ xs: 12, sm: 6 }}>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={leftCardVariants}
+                  transition={{ delay: 0.2 }}
+                >
+                  <Card
+                    sx={{
+                      p: 3,
+                      background: "rgba(10, 10, 42, 0.6)",
+                      backdropFilter: "blur(10px)",
+                      border: "1px solid rgba(138, 43, 226, 0.3)",
+                      boxShadow: "0 8px 32px rgba(138, 43, 226, 0.2)",
+                    }}
+                  >
+                    <Stack
+                      direction="row"
+                      spacing={2}
+                      alignItems="center"
+                      justifyContent="space-evenly"
+                    >
+                      <IconButton
+                        sx={{
+                          backgroundColor: "rgba(138, 43, 226, 0.2)",
+                          color: "rgba(138, 43, 226, 0.8)",
+                          "&:hover": {
+                            backgroundColor: "rgba(138, 43, 226, 0.3)",
+                          },
+                        }}
+                      >
+                        <WorkOutlineIcon fontSize="large" />
+                      </IconButton>
+                      <Stack spacing={1}>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            color: "white",
+                            fontWeight: 600,
+                          }}
+                        >
+                          Fullstack Developer
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "rgba(255,255,255,0.7)",
+                          }}
+                        >
+                          10+ Projects Completed
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  </Card>
+                </motion.div>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid size={{ xs: 12, md: 8 }}>
             <motion.div
@@ -447,7 +445,7 @@ export default function AboutSection() {
                 </motion.div>
 
                 <Grid container spacing={3}>
-                  <Grid size={{ xs: 12, md: 6 }}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <motion.div
                       initial={{ y: 50, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
@@ -506,7 +504,7 @@ export default function AboutSection() {
                       </Card>
                     </motion.div>
                   </Grid>
-                  <Grid size={{ xs: 12, md: 6 }}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <motion.div
                       initial={{ y: 50, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}

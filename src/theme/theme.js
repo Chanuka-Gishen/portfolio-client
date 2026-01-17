@@ -8,22 +8,22 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#8a2be2", // Main red color
-      dark: "#A60303", // Darker red for hover
-      light: "#F20505", // Lighter variant
+      main: "#8a2be2", 
+      dark: "#A60303",
+      light: "#F20505",
     },
     secondary: {
-      main: "#FFC107", // Amber for secondary accents
-      dark: "#FFB300", // Darker amber for hover
-      light: "#FFD54F", // Lighter amber
+      main: "#FFC107",
+      dark: "#FFB300",
+      light: "#FFD54F",
     },
     background: {
-      default: "#ffffff", // Light background
-      paper: "#ffffff", // Elevated surfaces
+      default: "#ffffff",
+      paper: "#ffffff",
     },
     text: {
-      primary: "#000000", // Dark text for light background
-      secondary: "#616161", // Subtle dark gray for secondary text
+      primary: "#000000",
+      secondary: "#616161",
     },
     success: {
       main: "#13DEB9",
@@ -60,22 +60,22 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#FF4C4C", // Main red color
-      dark: "#D32F2F", // Darker red for hover
-      light: "#FF6B6B", // Lighter variant
+      main: "#FF4C4C",
+      dark: "#D32F2F",
+      light: "#FF6B6B",
     },
     secondary: {
-      main: "#FFC107", // Amber for secondary accents
-      dark: "#FFB300", // Darker amber for hover
-      light: "#FFD54F", // Lighter amber
+      main: "#FFC107",
+      dark: "#FFB300",
+      light: "#FFD54F",
     },
     background: {
-      default: "#121212", // Dark background
-      paper: "#1e1e1e", // Elevated surfaces
+      default: "#121212",
+      paper: "#1e1e1e",
     },
     text: {
-      primary: "#FFFFFF", // White text for contrast
-      secondary: "#B0BEC5", // Subtle gray for secondary text
+      primary: "#FFFFFF",
+      secondary: "#B0BEC5",
     },
     divider: "#37474F",
     success: {

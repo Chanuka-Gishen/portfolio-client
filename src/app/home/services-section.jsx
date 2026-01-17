@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
 import { Box, Container, Grid, Typography } from "@mui/material";
@@ -69,6 +69,8 @@ export default function ServicesSection() {
     <Box
       id="services"
       sx={{
+        display: "flex",
+        alignItems: "center",
         minHeight: { xs: "auto", md: "100vh" },
         width: "100%",
       }}
@@ -81,7 +83,7 @@ export default function ServicesSection() {
             </Typography>
           </Grid>
           {servicesList.map((service, index) => (
-            <Grid size={{ xs: 12, md: 4 }} key={index}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <motion.div
                 initial="offscreen"
                 whileInView="onscreen"
