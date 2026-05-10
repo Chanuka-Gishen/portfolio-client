@@ -25,24 +25,28 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform - Vitalian Fashion",
-    url: null,
+    title: "Royal Mobile Online Store",
+    url: "https://www.royalmobile.lk",
     shortDesc:
-      "Developed a full-featured e-commerce platform comprising both a public-facing storefront and a dedicated admin dashboard.",
+      "Developed a full-featured store front website application comprising both a public-facing storefront and a dedicated admin dashboard.",
     fullDesc:
-      "I developed a full-featured e-commerce website that includes both a public storefront and an admin dashboard. The public site allows users to browse products, view detailed information, and add items to a shopping cart, with Cash-on-Delivery (COD) currently supported and online payment integration coming soon. The admin panel enables product management (add, update), displays sales statistics, and integrates with Koombiyo for delivery handling.",
-    siteLiveUrl: "https://vitalianfashion.com/",
+      "I developed a full-featured e-commerce store front website that includes both a public storefront and an admin dashboard. The public site allows users to browse products, view detailed information, check warranty and payment options with prices. The admin panel enables product management (add, update, delete), Fully customise the home page sections and their appearing order, Manage customer reviews.",
+    siteLiveUrl: "https://www.royalmobile.lk",
     gitUrl: null,
-    technologies: ["NextJs", "Node.js", "ExpressJs", "MongoDB", "MUI"],
+    technologies: [
+      "NextJs",
+      "ReactJs",
+      "Node.js",
+      "ExpressJs",
+      "MongoDB",
+      "MUI",
+    ],
     images: [
-      "images/projects/vitalian-1.png",
-      "images/projects/vitalian-2.png",
-      "images/projects/vitalian-3.png",
-      "images/projects/vitalian-4.png",
-      "images/projects/vitalian-5.png",
-      "images/projects/vitalian-6.png",
-      "images/projects/vitalian-7.png",
-      "images/projects/vitalian-8.png",
+      "images/projects/rm-1.png",
+      "images/projects/rm-2.png",
+      "images/projects/rm-3.png",
+      "images/projects/rm-4.png",
+      "images/projects/rm-5.png",
     ],
   },
   {
@@ -107,6 +111,28 @@ const projects = [
   },
   {
     id: 5,
+    title: "E-Commerce Platform - Vitalian Fashion",
+    url: null,
+    shortDesc:
+      "Developed a full-featured e-commerce platform comprising both a public-facing storefront and a dedicated admin dashboard.",
+    fullDesc:
+      "I developed a full-featured e-commerce website that includes both a public storefront and an admin dashboard. The public site allows users to browse products, view detailed information, and add items to a shopping cart, with Cash-on-Delivery (COD) currently supported and online payment integration coming soon. The admin panel enables product management (add, update), displays sales statistics, and integrates with Koombiyo for delivery handling.",
+    siteLiveUrl: "https://vitalianfashion.com/",
+    gitUrl: null,
+    technologies: ["NextJs", "Node.js", "ExpressJs", "MongoDB", "MUI"],
+    images: [
+      "images/projects/vitalian-1.png",
+      "images/projects/vitalian-2.png",
+      "images/projects/vitalian-3.png",
+      "images/projects/vitalian-4.png",
+      "images/projects/vitalian-5.png",
+      "images/projects/vitalian-6.png",
+      "images/projects/vitalian-7.png",
+      "images/projects/vitalian-8.png",
+    ],
+  },
+  {
+    id: 6,
     title: "Delivery Driver Mobile App",
     url: null,
     shortDesc:
@@ -126,7 +152,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Air Conditioning Service Management System - EREngineers",
     url: null,
     shortDesc:
@@ -154,7 +180,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Visa Appointment Bot",
     url: null,
     shortDesc:
@@ -172,7 +198,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Bookkeeping Management System",
     url: null,
     shortDesc:
@@ -192,7 +218,7 @@ const projects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Emotic - Final Year Project",
     url: null,
     shortDesc:
@@ -464,8 +490,7 @@ export default function ProjectSection() {
                     <Stack
                       direction={{ sx: "column", md: "row" }}
                       spacing={2}
-                      alignItems="center"
-                      sx={{ mb: 1 }}
+                      sx={{ alignItems: "center", mb: 1 }}
                     >
                       <Typography
                         variant="h5"
@@ -495,8 +520,7 @@ export default function ProjectSection() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.3 }}
-                      sx={{ mb: 2 }}
-                      textAlign="justify"
+                      sx={{ mb: 2, textAlign: "justify" }}
                     >
                       {project.shortDesc}
                     </Typography>
@@ -557,8 +581,7 @@ export default function ProjectSection() {
                     >
                       <Typography
                         variant="body1"
-                        sx={{ mb: 2 }}
-                        textAlign="justify"
+                        sx={{ mb: 2, textAlign: "justify" }}
                       >
                         {project.fullDesc}
                       </Typography>

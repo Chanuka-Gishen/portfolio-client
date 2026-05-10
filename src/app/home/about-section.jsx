@@ -13,7 +13,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import { WorkOutlineOutlined as WorkOutlineIcon } from "@mui/icons-material";
 import BusinessIcon from "@mui/icons-material/Business";
 import CampaignIcon from "@mui/icons-material/Campaign";
 
@@ -42,6 +42,7 @@ const frameworks = [
   { name: "Material UI", icon: "/images/techicons/mui.svg" },
   { name: "MySql", icon: "/images/techicons/mysql.svg" },
   { name: "MongoDb", icon: "/images/techicons/mongodb.svg" },
+  { name: "PostgreSQL", icon: "/images/techicons/postgresql.svg" },
   { name: "AWS", icon: "/images/techicons/aws.svg" },
   { name: "Cloudfair", icon: "/images/techicons/cloudfair.svg" },
   { name: "Codeigniter", icon: "/images/techicons/codeigniter.svg" },
@@ -235,10 +236,10 @@ export default function AboutSection() {
           py: 8,
         }}
       >
-        <Grid container spacing={4} alignItems={"center"}>
+        <Grid container spacing={4} sx={{ alignItems: "center" }}>
           <Grid size={{ xs: 12, md: 4 }}>
             <Grid container spacing={2}>
-              <Grid size={{ xs: 12, sm: 6 }}>
+              <Grid size={12}>
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -257,7 +258,7 @@ export default function AboutSection() {
                       justifyContent: "center",
                     }}
                   >
-                    <Stack spacing={1} alignItems="center">
+                    <Stack spacing={1} sx={{ alignItems: "center" }}>
                       <Typography
                         variant="h1"
                         sx={{
@@ -269,7 +270,7 @@ export default function AboutSection() {
                           WebkitTextFillColor: "transparent",
                         }}
                       >
-                        2+
+                        3+
                       </Typography>
                       <Typography
                         variant="h5"
@@ -295,7 +296,7 @@ export default function AboutSection() {
                   </Card>
                 </motion.div>
               </Grid>
-              <Grid size={{ xs: 12, sm: 6 }}>
+              <Grid size={12}>
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -315,8 +316,10 @@ export default function AboutSection() {
                     <Stack
                       direction="row"
                       spacing={2}
-                      alignItems="center"
-                      justifyContent="space-evenly"
+                      sx={{
+                        alignItems: "center",
+                        justifyContent: "space-evenly",
+                      }}
                     >
                       <IconButton
                         sx={{
@@ -372,10 +375,10 @@ export default function AboutSection() {
                 }}
               >
                 <Typography
-                  variant="overline"
-                  textAlign={{ xs: "center", md: "left" }}
-                  fontWeight="bold"
+                  variant="h4"
                   sx={{
+                    textAlign: { xs: "center", md: "left" },
+                    fontWeight: "bold",
                     color: "rgba(138, 43, 226, 0.8)",
                     letterSpacing: 2,
                     mb: 1,
@@ -398,8 +401,8 @@ export default function AboutSection() {
                 >
                   <Typography
                     variant="h1"
-                    textAlign={{ xs: "center", md: "left" }}
                     sx={{
+                      textAlign: { xs: "center", md: "left" },
                       color: "white",
                       fontWeight: 700,
                       mb: 3,
@@ -432,8 +435,9 @@ export default function AboutSection() {
                   <Typography
                     variant="body1"
                     fontStyle="italic"
-                    textAlign={{ xs: "center", md: "justify" }}
                     sx={{
+                      fontStyle: "italic",
+                      textAlign: { xs: "center", md: "justify" },
                       color: "rgba(255,255,255,0.8)",
                       mb: 4,
                     }}
@@ -466,8 +470,7 @@ export default function AboutSection() {
                           <Stack
                             direction="row"
                             spacing={2}
-                            alignItems="center"
-                            mb={2}
+                            sx={{ alignItems: "center", mb: 2 }}
                           >
                             <IconButton
                               sx={{
@@ -525,8 +528,7 @@ export default function AboutSection() {
                         <Stack
                           direction="row"
                           spacing={2}
-                          alignItems="center"
-                          mb={2}
+                          sx={{ alignItems: "center", mb: 2 }}
                         >
                           <IconButton
                             sx={{
