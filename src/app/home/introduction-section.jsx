@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -77,7 +77,7 @@ export default function IntroductionSection() {
         overflow: "hidden",
         alignItems: "center",
         justifyContent: "center",
-        pt: '20px'
+        pt: "20px",
       }}
     >
       <Grid size={12}>
@@ -149,41 +149,52 @@ export default function IntroductionSection() {
                     </motion.span>
                   ))}
                 </Typography>
-                <Typography variant="h5" color="white" textAlign="justify">
+                <Typography
+                  variant="h5"
+                  sx={{ color: "white", textAlign: "justify" }}
+                >
                   Experienced full-stack software engineer passionate about
                   building scalable, user-centric applications with modern
                   technologies across the entire stack from intuitive front-end
                   interfaces to robust back-end systems.
                 </Typography>
                 <Box
-                  display="flex"
-                  flexDirection="row"
-                  gap={2}
-                  alignItems="center"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: 2,
+                    alignItems: "center",
+                  }}
                 >
                   <AlternateEmailIcon
                     fontSize="large"
                     sx={{ color: "white" }}
                   />
-                  <Typography color="white">
+                  <Typography sx={{ color: "white" }}>
                     chanukagishen@hotmail.com
                   </Typography>
                 </Box>
                 <Box
-                  display="flex"
-                  flexDirection="row"
-                  gap={2}
-                  alignItems="center"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: 2,
+                    alignItems: "center",
+                  }}
                 >
                   <ContactPhoneIcon fontSize="large" sx={{ color: "white" }} />
-                  <Typography color="white">+94 76 075 6482</Typography>
+                  <Typography sx={{ color: "white" }}>
+                    +94 76 075 6482
+                  </Typography>
                 </Box>
-                <Typography color="white">More about me</Typography>
+                <Typography sx={{ color: "white" }}>More about me</Typography>
                 <Stack
                   direction="row"
                   spacing={{ xs: 2, md: 3 }}
-                  justifyContent={{ xs: "center", md: "left" }}
-                  alignItems={{ xs: "center", md: "left" }}
+                  sx={{
+                    justifyContent: { xs: "center", md: "left" },
+                    alignItems: { xs: "center", md: "left" },
+                  }}
                 >
                   <IconButton
                     sx={{
@@ -199,7 +210,7 @@ export default function IntroductionSection() {
                     onClick={() =>
                       window.open(
                         "https://www.linkedin.com/in/chanuka-mendis-4488791b8",
-                        "_blank"
+                        "_blank",
                       )
                     }
                   >
@@ -219,7 +230,7 @@ export default function IntroductionSection() {
                     onClick={() =>
                       window.open(
                         "https://www.facebook.com/chanuka.gishen/",
-                        "_blank"
+                        "_blank",
                       )
                     }
                   >
@@ -239,7 +250,7 @@ export default function IntroductionSection() {
                     onClick={() =>
                       window.open(
                         "https://www.instagram.com/_c.h.a.n.u_g.i.s.h.e.n_/",
-                        "_blank"
+                        "_blank",
                       )
                     }
                   >

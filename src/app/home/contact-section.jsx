@@ -81,7 +81,11 @@ const ContactSection = () => {
       sx={{ width: "100%" }}
     >
       <Container sx={{ px: { xs: 2, md: 6 }, mb: "20px" }}>
-        <Grid container spacing={4} justifyContent="center" alignItems="center">
+        <Grid
+          container
+          spacing={4}
+          sx={{ justifyContent: "center", alignItems: "center" }}
+        >
           {!isLoading && isOpenSnackBar && (
             <Grid size={{ xs: 12, md: 6 }}>
               <Alert
@@ -101,7 +105,7 @@ const ContactSection = () => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <Typography variant="h3" textAlign="center">
+              <Typography variant="h3" sx={{ textAlign: "center" }}>
                 Contact Me
               </Typography>
             </motion.div>

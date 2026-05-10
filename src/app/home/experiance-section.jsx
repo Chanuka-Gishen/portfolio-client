@@ -45,15 +45,16 @@ const educationalExperiance = [
 
 const workExperiance = [
   {
-    year: "2025 Jan - Present",
-    title: "Fullstack Software Engineer (Freelance)",
-    from: "ZenXbyte, Panadura",
-  },
-  {
-    year: "2024 Jan - 2025 Dec",
-    title: "Fullstack Software Engineer (Contract Basis)",
+    year: "2024 Jan - Present",
+    title: "Fullstack Software Engineer",
     from: "360Tech, Bandaragama",
   },
+  {
+    year: "2025 Jan - Present",
+    title: "Freelance",
+    from: "ZenXbyte, Panadura",
+  },
+
   {
     year: "2021 - 2022",
     title: "Fullstack Developer Intern",
@@ -78,7 +79,7 @@ const ExperienceCard = ({ data, ...props }) => (
     }}
   >
     <Stack spacing={2}>
-      <Stack direction="row" spacing={2} alignItems="center">
+      <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
         <Box
           sx={{
             borderRadius: "50%",
@@ -166,7 +167,7 @@ export default function ExperianceSection() {
                 <Stack
                   direction="row"
                   spacing={2}
-                  alignItems="center"
+                  sx={{ alignItems: "center" }}
                   component={motion.div}
                   variants={itemVariants}
                 >
@@ -204,7 +205,7 @@ export default function ExperianceSection() {
                 <Stack
                   direction="row"
                   spacing={2}
-                  alignItems="center"
+                  sx={{ alignItems: "center" }}
                   component={motion.div}
                   variants={itemVariants}
                 >
