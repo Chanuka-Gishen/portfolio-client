@@ -68,7 +68,7 @@ const COMMANDS = [
   "project",
   "github",
   "contact",
-  "resume",
+  // "resume",
   "neofetch",
   "history",
   "ls",
@@ -100,7 +100,7 @@ const HELP_COMMANDS = [
   ["project <slug>", "Explore a specific project"],
   ["github", "GitHub profile"],
   ["contact", "Contact information"],
-  ["resume", "Resume and download link"],
+  // ["resume", "Resume and download link"],
   ["neofetch", "Developer system information"],
   ["history", "Previous commands"],
   ["theme", "Toggle terminal appearance"],
@@ -472,39 +472,39 @@ function getCommandResult(
         ],
       };
 
-    case "resume":
-      return {
-        items: [
-          {
-            type: "heading",
-            content: "Professional Resume",
-          },
-          {
-            type: "text",
-            content: "Full-Stack Software Engineer | 3+ years of experience",
-          },
-          {
-            type: "text",
-            content:
-              "Explore my professional experience, technical expertise, and project background.",
-          },
-          { type: "spacer" },
-          {
-            type: "links",
-            links: [
-              {
-                label: "View resume",
-                href: "/resume",
-              },
-              {
-                label: "Open PDF",
-                href: "/resume.pdf",
-                external: true,
-              },
-            ],
-          },
-        ],
-      };
+    // case "resume":
+    //   return {
+    //     items: [
+    //       {
+    //         type: "heading",
+    //         content: "Professional Resume",
+    //       },
+    //       {
+    //         type: "text",
+    //         content: "Full-Stack Software Engineer | 3+ years of experience",
+    //       },
+    //       {
+    //         type: "text",
+    //         content:
+    //           "Explore my professional experience, technical expertise, and project background.",
+    //       },
+    //       { type: "spacer" },
+    //       {
+    //         type: "links",
+    //         links: [
+    //           {
+    //             label: "View resume",
+    //             href: "/resume",
+    //           },
+    //           {
+    //             label: "Open PDF",
+    //             href: "/resume.pdf",
+    //             external: true,
+    //           },
+    //         ],
+    //       },
+    //     ],
+    //   };
 
     case "neofetch":
       return {
